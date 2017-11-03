@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<style>
+    html {
+        background-color: #333333;
+    }
+    table.pomodoro {
+        color: white;
+        text-align: center;
+        margin-left: 475px;
+        margin-right: 475px;
+        border-collapse: separate;
+        border-spacing: 60px 10px;
+        border-style: dashed;
+        text-align: center;
+    }
+    .titre {
+        font-family: serif;
+        font-size: 70px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+    .button {
+        font-size: 20px;
+        background-color: #333333;
+        border-color: #333333;
+        color: white;
+        border-spacing: inherit;
+    }
+    .tomate {
+        background: #333333;
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        border: 2px solid green;
+        overflow: hidden;
+    }
+    .interieur {
+        background-color: green;
+        height: 100%;
+        overflow:hidden;
+    }
+    .text {
+        text-align: inherit;
+        font-style: italic;
+        font-size: 20px;
+        color: white;
+        top: 50%
+    }
+</style>
+
+<head>
+    <title> Pomodoro Clock </title>
+</head>
+
+<script src="pomodoro.js"></script>
+
+<div class="page">
+    <br><br>
+    <div class="titre">
+        FreeCodeCamp
+    </div>
+    <br>
+    <table class="pomodoro">
+        <tr>
+            <th>BREAK LENGTH</th>
+            <th>SESSION LENGTH</th>
+        </tr>
+        <tr>
+            <td>
+                <button class="button" name="moins" id="moinsB">-</button>
+                <span id="break_length">
+                    5
+                </span>
+                <button class="button" name="plus" id="plusB">+</button>
+            </td>
+            <td>
+                <button class="button" name="moins" id="moinsS">-</button>
+                <span id="session_length">
+                    25
+                </span>
+                <button class="button" name="plus" id="plusS">+</button>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <center>
+        <div class="text" id="text">
+        </div>
+        <br>
+        <div id="montre" class="tomate">
+            <div id="start" class="interieur text">
+                <br><br><br>
+                Start
+            </div>
+        </div>
+    </center>
+</div>
